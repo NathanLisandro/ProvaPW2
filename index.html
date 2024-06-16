@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IBGE Notícias</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1 id="title-page">Portal de Notícias IBGE</h1>
+        <form id="search-form">
+            <div id="search-container">
+                <input type="text" id="search-input" name="busca" placeholder="Buscar notícias...">
+                <button id="search-button" type="submit">🔍</button>
+
+            </div>
+        </form>
+        <div id="filter-container">
+            <div>
+                <svg id="filter-icon" width="20" height="20" fill="#f0f0f0" viewBox="0 0 80 90" focusable="false"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="m 0,0 30,45 0,30 10,15 0,-45 30,-45 Z"></path>
+                </svg>
+            </div>
+            <div id="counter-apply-filter"></div>
+        </div>
+    </header>
+
+    <main>
+        <ul id="news-list"></ul>
+        <ul id="pagination"></ul>
+    </main>
+
+    <footer>
+        <p>IBGE Notícias</p>
+    </footer>
+
+    <dialog id="filter-dialog">
+        <button type="button" id="close-dialog" style="position: absolute; top: 0; right: 0;">X</button>
+        <form id="filter-form">
+            <div>
+                <label for="filter-type">Tipo:</label>
+                <select id="filter-type" name="tipo">
+                    <option value="">Selecione</option>
+                    <option value="noticia">Notícia</option>
+                    <option value="release">Release</option>
+                </select>
+            </div>
+            <div>
+                <label for="filter-quantity">Quantidade:</label>
+                <select id="filter-quantity" name="quantidade">
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                    <option value="25">25</option>
+                    <option value="30">30</option>
+                </select>
+            </div>
+            <div>
+                <label for="filter-from">De:</label>
+                <input type="date" id="filter-from" name="from">
+            </div>
+            <div>
+                <label for="filter-to">Até:</label>
+                <input type="date" id="filter-to" name="to">
+            </div>
+            <button type="button" id="close-dialog">Fechar</button>
+            <button type="button" id="apply-filters">Aplicar</button>
+        </form>
+    </dialog>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
