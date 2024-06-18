@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function fetchNews(query = '') {
-        const apiUrl = `http://servicodados.ibge.gov.br/api/v3/noticias${query}`;
+        const apiUrl = `https://servicodados.ibge.gov.br/api/v3/noticias${query}`;
 
         fetch(apiUrl)
             .then(response => response.json())
